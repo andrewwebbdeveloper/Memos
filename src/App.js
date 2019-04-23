@@ -96,7 +96,7 @@ const App = () => {
       } else {
         // Allows a second to remember cards and then un-flips
         setTimeout(resetCards, 1000);
-        switchPlayer();
+        setTimeout(switchPlayer, 1100);
       }
     }
   };
