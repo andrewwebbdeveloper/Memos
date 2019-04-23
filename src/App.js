@@ -55,7 +55,6 @@ const App = () => {
   const resetCards = () => {
     setFlipped([]);
     setDisabled(false);
-    switchPlayer();
   };
 
   const switchPlayer = () => {
@@ -94,10 +93,10 @@ const App = () => {
         setSolved([...solved, ...isFlipped, id]);
         resetCards();
         scorePlayer();
-        switchPlayer();
       } else {
         // Allows a second to remember cards and then un-flips
         setTimeout(resetCards, 1000);
+        switchPlayer();
       }
     }
   };
